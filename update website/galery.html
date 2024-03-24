@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galery </title>
+    <link rel="stylesheet" href="galery.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+    <div class="slide " style="background-image: url('item/foto1.jpeg');">
+    <h4>Pemprov Jateng berkomitmen berantas korupsi melalui Pendidikan</h4>
+    </div>
+
+    <div class="slide " style="background-image: url('item/foto2.jpeg');">
+    <h4>Kunjungan Kerja Pj. Gubernur Jawa Tengah Nana Sudjana ke Kabupaten Pekalongan dan Kabupaten Batang
+    </h4>
+    </div>
+
+    <div class="slide" style="background-image: url('item/foto3.jpeg');">
+    <h4>Penyerahan Laporan Hasil Pemeriksaan Kepatuhan Atas Pengelolaan Kredit Proyek sampai tahun 2023
+    </h4>
+    </div>  
+
+    <div class="slide" style="background-image: url('item/foto4.jpeg');">
+    <h4>Penyerahan Laporan Hasil Pemeriksaan Kepatuhan Atas Pengelolaan Kredit Proyek sampai tahun 2023
+    </h4>
+    </div>  
+    
+    <div class="slide" style="background-image: url('item/foto5.jpeg');">
+    <h4>Penyerahan Laporan Hasil Pemeriksaan Kepatuhan Atas Pengelolaan Kredit Proyek sampai tahun 2023
+    </h4>
+    </div>    
+
+    </div>
+
+    <script>
+        activeslideimg();
+
+        function activeslideimg(activeSlide = 2) {
+            const slides = document.querySelectorAll(".slide");
+
+            slides[activeSlide].classList.add("active");
+
+            for (const slide of slides) {
+                slide.addEventListener("click", () => {
+                    clearActiveClasses();
+
+                    slide.classList.add("active");
+                });
+            }
+
+
+            function clearActiveClasses() {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                })
+            }
+
+
+        }
+    </script>
+</body>
+</html>
